@@ -1,0 +1,4 @@
+Create an intro section that stores a character's name and welcomes them to the world. 
+
+Create a battle system.
+
