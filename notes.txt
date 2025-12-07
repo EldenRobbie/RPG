@@ -1,0 +1,11 @@
+For this project I'm going to make a short, text_based RPG.
+
+There will be a battle system where players can attack, defend, use items or flee.
+(After getting these basics done, I want to eventually add skills with magic(MP) or skill points(SP) needed to use)
+There will be at least five enemies to fight by the end of the short project.
+
+There will be an experience/level system where stats will increase after leveling up.
+
+There should be at least three different quests to go on.
+
+There will be NPC's to talk to with dialogues choices. 
