@@ -2,11 +2,6 @@ import random
 from characters import *
 from enemies import *
 from clr_screen import *
-# print(random.randint(1,6))
-
-def main():
-    battle()
-
 
 def battle():
     print(f"A wild {enemy_1.name} appears!")
@@ -37,14 +32,41 @@ def battle():
 
 
         elif pmt == "3" or pmt == "item":
-            print("You use an item.")
-            return
+            item()
         
         elif pmt == "4" or pmt == "flee":
             clear_screen()
-            print("You flee.")
-            return
-        
+            # print(f"flee equals: {flee()}")
+            # if flee() == 1:
+            #     break
+            # elif flee() == 0:
+            #     return
+            # else:
+            #     flee()
+            msg = ("You try to flee.")
+            print(msg)
+            input("")
+            clear_screen()
+            print(msg)
+            input(".")
+            clear_screen()
+            print(msg)
+            input(". .")
+            clear_screen()
+            print(msg)
+            input(". . .")
+            clear_screen()
+            flee_roll = random.randint(1, 100) + (player.agility * 3)
+            if flee_roll >= 75:
+                print("Congratulations! You excaped!")
+                break
+            else:
+                print("You were unable to escape!")
+                continue
+
+            
+           
+
         else:
             print("That's an invalid input.")
             
@@ -80,11 +102,12 @@ def defend():
 
 
 def item():
-    pass
+    clear_screen()
+    print("Sorry, there are no items to use right now.")
 
 
 def flee():
     pass
+    
 
-
-main()
+battle()

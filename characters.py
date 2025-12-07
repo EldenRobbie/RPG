@@ -3,7 +3,7 @@
 # Attack, Defend, Item, Flee
 
 class Character:
-    def __init__(self, name, level, xp, xp_to_next_lvl, max_hp, hp, attack, defense, accuracy, items):
+    def __init__(self, name, level, xp, xp_to_next_lvl, max_hp, hp, attack, defense, accuracy, agility, items):
         self.name = name
         self.level = level
         self.xp = xp
@@ -13,7 +13,8 @@ class Character:
         self.attack = attack
         self.defense = defense
         self.accuracy = accuracy
+        self.agility = agility
         self.items = items
 
-player = Character("Robbie", 1, 0, 10, 5, 5, 2, 0, 1, ["potato"])
+player = Character("Robbie", 1, 0, 10, 5, 5, 2, 0, 1, 3, ["potato"])
 

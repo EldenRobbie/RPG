@@ -1,30 +1,10 @@
-Order of Operations
-
-What would you like to do?
-
-Attack
--You attack
--Show enemy health
--Enemy attacks
--Show your health
--Reprompt
-
-Defend
--You defend
--Enemy attacks
--Show your health
--Reprompt
-
 Item
 -Use item
 -Enemy attacks
 -Show your health
 -Reprompt
 
-Flee
--Attempt to flee
--If successful: exit the battle with no xp or items gained
-If unsuccessful: enemy attacks
--Show your health
--Reprompt
+Update flee() to have the enemy attack after an unsuccessful flee attempt.
+
+
 
