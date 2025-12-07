@@ -1,6 +1,7 @@
 from characters import *
 
 def main():
-    print(player.name)
+    # check status, battle, use item, talk
+    print("Welcome to the game!")
 
 main()

@@ -17,4 +17,3 @@ class Character:
 
 player = Character("Robbie", 1, 0, 10, 5, 5, 2, 0, 1, ["potato"])
 
-print(player.items)

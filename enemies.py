@@ -9,5 +9,4 @@ class Enemy:
 
 enemy_1 = Enemy("slime", 1, 0, 1, 2, [])
 
-print(enemy_1.name)
 
