@@ -1,17 +1,30 @@
-For battle():
+Order of Operations
 
-Ask what the user wants to do:
+What would you like to do?
+
 Attack
+-You attack
+-Show enemy health
+-Enemy attacks
+-Show your health
+-Reprompt
+
 Defend
+-You defend
+-Enemy attacks
+-Show your health
+-Reprompt
+
 Item
+-Use item
+-Enemy attacks
+-Show your health
+-Reprompt
+
 Flee
+-Attempt to flee
+-If successful: exit the battle with no xp or items gained
+If unsuccessful: enemy attacks
+-Show your health
+-Reprompt
 
-
-Enemy stats:
-Name
-HP
-Attack
-Defense
-Accuracy
-XP granted on defeat
-Items granted on defeat
