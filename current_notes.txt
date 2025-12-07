@@ -4,7 +4,12 @@ Item
 -Show your health
 -Reprompt
 
-Update flee() to have the enemy attack after an unsuccessful flee attempt.
+
+Implement the level/xp system for battles. 
+-When leveling up, increment level by 1, roll to determine how much max_hp, attack and defense go up
+
+Implement an item system. Create items to be used during battle and won at the conclusion of victorious battles at a certain chance. 
 
 
+Begin working on the introduction, prompting for the player's name. Update {player.name} with this input. 
 

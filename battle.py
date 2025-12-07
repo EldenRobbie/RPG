@@ -2,6 +2,7 @@ import random
 from characters import *
 from enemies import *
 from clr_screen import *
+from char_func import *
 
 def battle():
     print(f"A wild {enemy_1.name} appears!")
@@ -92,6 +93,12 @@ def attack():
         clear_screen()
         print("Victory!")
         print("Doot doo doo doo, doo doo, doot doo doo!")
+        input("")
+        clear_screen()
+
+        print(f"{player.name} gained {enemy_1.xp_grant} XP!")
+        level_up()
+
         return 
     else:
         input("")

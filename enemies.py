@@ -8,6 +8,4 @@ class Enemy:
         self.xp_grant = xp_grant
         self.item_grant = item_grant
 
-enemy_1 = Enemy("slime", 3, 1, 0, 1, 2, [])
-
-
+enemy_1 = Enemy("slime", 3, 1, 0, 1, 5, [])
