@@ -62,28 +62,51 @@ def battle():
                 break
             else:
                 print("You were unable to escape!")
+                input("")
+                clear_screen()
+                print(f"{player.name}'s hp is: {player.hp}.")
+                print(f"{enemy_1.name} attacks {player.name} for {enemy_1.attack} damage.")
+                player.hp -= enemy_1.attack
+                input("")
+                clear_screen()
+                if player.hp <= 0:
+                    print("GAME OVER")
+                    break 
+                else:
+                    print(f"{player.name}'s hp is: {player.hp}.")
+
                 continue
 
             
-           
-
         else:
             print("That's an invalid input.")
             
-
 
 def attack():
     clear_screen()
     print(f"{enemy_1.name}'s health is {enemy_1.hp}.")
     print(f"{player.name} attacks the {enemy_1.name} for {player.attack} damage.")
     enemy_1.hp -= player.attack
+    
     if enemy_1.hp <= 0:
         clear_screen()
         print("Victory!")
         print("Doot doo doo doo, doo doo, doot doo doo!")
         return 
     else:
-        print(f"{enemy_1.name}'s hp is: {enemy_1.hp}.")
+        input("")
+        clear_screen()
+        print(f"{enemy_1.name} attacks {player.name} for {enemy_1.attack} damage.")
+        player.hp -= enemy_1.attack
+        input("")
+        clear_screen()
+        if player.hp <= 0:
+            print("GAME OVER")
+            return
+        else:
+            print(f"{player.name}'s hp is: {player.hp}.")
+            print(f"{enemy_1.name}'s hp is: {enemy_1.hp}.")
+            
 
 
 def defend():
@@ -108,6 +131,3 @@ def item():
 
 def flee():
     pass
-    
-
-battle()
