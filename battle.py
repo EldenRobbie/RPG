@@ -96,9 +96,7 @@ def attack():
         input("")
         clear_screen()
 
-        print(f"{player.name} gained {enemy_1.xp_grant} XP!")
         level_up()
-
         return 
     else:
         input("")
