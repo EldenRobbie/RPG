@@ -1,0 +1,17 @@
+For battle():
+
+Ask what the user wants to do:
+Attack
+Defend
+Item
+Flee
+
+
+Enemy stats:
+Name
+HP
+Attack
+Defense
+Accuracy
+XP granted on defeat
+Items granted on defeat
