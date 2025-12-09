@@ -13,6 +13,7 @@ def level_up():
 
     if player.xp_to_next_lvl <= 0:
         player.level += 1
+        player.xp_to_next_lvl = player.level * 5
         print(f"{player.name} leveled up to {player.level}!")
         input("")
         clear_screen()
@@ -28,11 +29,11 @@ def stats_up():
     def_up_chance = random.randint(1, 20)
     def_up = 0
 
-    print(f"Player HP is: {player.hp}")
-    player.hp += hp_up
+    print(f"Player's max HP is: {player.max_hp}")
+    player.max_hp += hp_up
     input("")
     clear_screen()
-    print(f"Player HP is: {player.hp}")
+    print(f"Player's max HP is: {player.max_hp}")
     input("")
     clear_screen()
 

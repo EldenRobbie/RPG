@@ -9,6 +9,8 @@ def main():
     battle()
     input("Let's go again to test out your new stats!")
     battle()
+    input("Let's test!")
+    battle()
     
 
 def story():
