@@ -29,38 +29,29 @@ def stats_up():
     def_up_chance = random.randint(1, 20)
     def_up = 0
 
-    print(f"Player's max HP is: {player.max_hp}")
+    print(f"{player.name}'s max HP was: {player.max_hp}")
     player.max_hp += hp_up
-    input("")
-    clear_screen()
-    print(f"Player's max HP is: {player.max_hp}")
+    print(f"{player.name}'s new max HP is: {player.max_hp}!")
     input("")
     clear_screen()
 
-    print(f"Player Attack is: {player.attack}.")
+    print(f"{player.name}'s attack was: {player.attack}.")
     if att_up_chance == 5:
         att_up = 2
         player.attack += att_up
     else:
         att_up == 1
         player.attack += att_up
-    input("")
-    clear_screen()
-    print(f"Player Attack is: {player.attack}.")
+    print(f"{player.name}'s attack is now: {player.attack}!")
     input("")
     clear_screen()
 
-    print(f"Player Defense is: {player.defense}.")
     if def_up_chance > 5:
+        print(f"{player.name}'s defense was: {player.defense}.")
         def_up = 1
         player.defense += def_up
-    input("")
-    clear_screen()
-    print(f"Player Defense is: {player.defense}.")
-    input("")
-    clear_screen()
-
-    
-
-
-
+        print(f"{player.name}'s defense is now: {player.defense}!")
+        input("")
+        clear_screen()
+    else:
+        clear_screen()
