@@ -7,7 +7,10 @@ Item
 
 Implement the level/xp system for battles. 
 -When leveling up, increment level by 1, roll to determine how much max_hp, attack and defense go up
-***Leveling up works, need to work on incrementing stats***
+***Leveling up needs to be updated: leveling up from 2 to 3 should take more than 5 XP***
+***Incrementing stats needs to be updated. hp is being incremented instead of max_hp***
+^^^
+***This also means that there will need to be changes when items are made, making sure to take max_hp into account***
 
 
 
