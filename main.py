@@ -4,6 +4,7 @@ from clr_screen import *
 
 def main():
     # check status, battle, use item, talk
+    if player
     story()
     clear_screen()
     battle()

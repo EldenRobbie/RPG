@@ -37,48 +37,17 @@ def battle():
         
         elif pmt == "4" or pmt == "flee":
             clear_screen()
-            # print(f"flee equals: {flee()}")
-            # if flee() == 1:
-            #     break
-            # elif flee() == 0:
-            #     return
-            # else:
-            #     flee()
-            msg = ("You try to flee.")
-            print(msg)
-            input("")
-            clear_screen()
-            print(msg)
-            input(".")
-            clear_screen()
-            print(msg)
-            input(". .")
-            clear_screen()
-            print(msg)
-            input(". . .")
-            clear_screen()
-            flee_roll = random.randint(1, 100) + (player.agility * 3)
-            if flee_roll >= 75:
-                print("Congratulations! You excaped!")
-                break
+            if player.hp <= 0:
+                print("GAME OVER")
+                return
             else:
-                print("You were unable to escape!")
-                input("")
-                clear_screen()
-                print(f"{player.name}'s hp is: {player.hp}.")
-                print(f"{enemy_1.name} attacks {player.name} for {enemy_1.attack} damage.")
-                player.hp -= enemy_1.attack
-                input("")
-                clear_screen()
-                if player.hp <= 0:
-                    print("GAME OVER")
-                    break 
+                flee_result = flee()
+                if flee_result == 1:
+                    break
                 else:
-                    print(f"{player.name}'s hp is: {player.hp}.")
+                    continue
 
-                continue
-
-            
+     
         else:
             print("That's an invalid input.")
             
@@ -135,4 +104,35 @@ def item():
 
 
 def flee():
-    pass
+    msg = ("You try to flee.")
+    print(msg)
+    input("")
+    clear_screen()
+    print(msg)
+    input(".")
+    clear_screen()
+    print(msg)
+    input(". .")
+    clear_screen()
+    print(msg)
+    input(". . .")
+    clear_screen()
+
+    flee_roll = random.randint(1, 100) + (player.agility * 3)
+    if flee_roll >= 75:
+        print("Congratulations! You excaped!")
+        return 1
+    else:
+        print("You were unable to escape!")
+        input("")
+        clear_screen()
+        print(f"{player.name}'s hp is: {player.hp}.")
+        print(f"{enemy_1.name} attacks {player.name} for {enemy_1.attack} damage.")
+        player.hp -= enemy_1.attack
+        input("")
+        clear_screen()
+        if player.hp <= 0:
+            print("GAME OVER")
+            
+        else:
+            print(f"{player.name}'s hp is: {player.hp}.")
