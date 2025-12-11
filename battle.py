@@ -1,4 +1,5 @@
 import random
+import sys
 from characters import *
 from enemies import *
 from clr_screen import *
@@ -76,7 +77,7 @@ def attack():
         clear_screen()
         if player.hp <= 0:
             print("GAME OVER")
-            return
+            sys.exit(1)
         else:
             print(f"{player.name}'s hp is: {player.hp}.")
             print(f"{enemy_1.name}'s hp is: {enemy_1.hp}.")
@@ -93,7 +94,7 @@ def defend():
     clear_screen()
     if player.hp <= 0:
         print("GAME OVER")
-        return 
+        sys.exit(1) 
     else:
         print(f"{player.name}'s hp is: {player.hp}.")
 
@@ -133,6 +134,7 @@ def flee():
         clear_screen()
         if player.hp <= 0:
             print("GAME OVER")
+            sys.exit(1)
             
         else:
             print(f"{player.name}'s hp is: {player.hp}.")

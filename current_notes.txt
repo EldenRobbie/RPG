@@ -4,18 +4,13 @@ Item
 -Show your health
 -Reprompt
 
-
-Implement the level/xp system for battles. 
--When leveling up, increment level by 1, roll to determine how much max_hp, attack and defense go up
-
-***This also means that there will need to be changes when items are made, making sure to take max_hp into account***
-
-
+Make it to where different enemies can appear for a battle.
 
 Implement an item system. Create items to be used during battle and won at the conclusion of victorious battles at a certain chance. 
 
+Implement accuracy, where there's a certain chance the player's attacks or the enemy's attacks might miss based on accuracy rolls.
 
-Begin working on the introduction, prompting for the player's name. Update {player.name} with this input. 
+Begin working on the introduction
 
 
 
