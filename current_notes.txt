@@ -4,6 +4,8 @@ Item
 -Show your health
 -Reprompt
 
+***The system.exit(1) used to end battles when player.hp <= 0 might create problems when something happens past a battle, try rewriting***
+
 Make it to where different enemies can appear for a battle.
 
 Implement an item system. Create items to be used during battle and won at the conclusion of victorious battles at a certain chance. 

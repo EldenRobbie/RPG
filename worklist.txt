@@ -1,0 +1,7 @@
+1. Work on different enemies to fight.
+
+
+2. Work on items.
+    - Healing items
+    - Automatic escape item
+    - Enemy damaging items

@@ -5,8 +5,15 @@ from enemies import *
 from clr_screen import *
 from char_func import *
 
+random_enemy = True
+enemy_list = [enemy_1, enemy_2, enemy_3, enemy_4]
+if random_enemy == False:
+    enemy = enemy_1
+elif random_enemy == True:
+    enemy = random.choice(enemy_list)
+
 def battle():
-    print(f"A wild {enemy_1.name} appears!")
+    print(f"A wild {enemy.name} appears!")
     input("")
     clear_screen()
     print(f"{player.name} has {player.hp} HP.")
@@ -14,13 +21,13 @@ def battle():
         input("")
         clear_screen()
         print("What would you like to do?")
-        print("1. Attack, 2. Defend, 3. Item, 4. Flee ")
+        print("1. Attack 2. Defend 3. Item 4. Flee ")
         prompt = input("")
         pmt = prompt.lower()
         
         if pmt == "1" or pmt == "attack":
             attack()
-            if enemy_1.hp > 0:
+            if enemy.hp > 0:
                 continue
             else:
                 break
@@ -55,11 +62,11 @@ def battle():
 
 def attack():
     clear_screen()
-    print(f"{enemy_1.name}'s health is {enemy_1.hp}.")
-    print(f"{player.name} attacks the {enemy_1.name} for {player.attack} damage.")
-    enemy_1.hp -= player.attack
+    print(f"{enemy.name}'s health is {enemy.hp}.")
+    print(f"{player.name} attacks the {enemy.name} for {player.attack} damage.")
+    enemy.hp -= player.attack
     
-    if enemy_1.hp <= 0:
+    if enemy.hp <= 0:
         clear_screen()
         print("Victory!")
         print("Doot doo doo doo, doo doo, doot doo doo!")
@@ -71,8 +78,8 @@ def attack():
     else:
         input("")
         clear_screen()
-        print(f"{enemy_1.name} attacks {player.name} for {enemy_1.attack} damage.")
-        player.hp -= enemy_1.attack
+        print(f"{enemy.name} attacks {player.name} for {enemy.attack} damage.")
+        player.hp -= enemy.attack
         input("")
         clear_screen()
         if player.hp <= 0:
@@ -80,15 +87,15 @@ def attack():
             sys.exit(1)
         else:
             print(f"{player.name}'s hp is: {player.hp}.")
-            print(f"{enemy_1.name}'s hp is: {enemy_1.hp}.")
+            print(f"{enemy.name}'s hp is: {enemy.hp}.")
             
 
 
 def defend():
     clear_screen()
-    blocked_dmg = enemy_1.attack - player.defense
+    blocked_dmg = enemy.attack - player.defense
     print(f"{player.name}'s hp is: {player.hp}, they defend!")
-    print(f"{enemy_1.name} attacks {player.name} for {blocked_dmg} damage.")
+    print(f"{enemy.name} attacks {player.name} for {blocked_dmg} damage.")
     player.hp -= blocked_dmg
     input("")
     clear_screen()
@@ -128,8 +135,8 @@ def flee():
         input("")
         clear_screen()
         print(f"{player.name}'s hp is: {player.hp}.")
-        print(f"{enemy_1.name} attacks {player.name} for {enemy_1.attack} damage.")
-        player.hp -= enemy_1.attack
+        print(f"{enemy.name} attacks {player.name} for {enemy.attack} damage.")
+        player.hp -= enemy.attack
         input("")
         clear_screen()
         if player.hp <= 0:
