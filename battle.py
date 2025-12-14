@@ -108,7 +108,17 @@ def defend():
 
 def item():
     clear_screen()
-    print("Sorry, there are no items to use right now.")
+    print("Items:")
+    print(item_list)
+    print("")
+    ans = input("What item would you like to use? ")
+    if ans.lower() == "potion":
+        if item_list["potion"] > 0:
+            potion()
+        else:
+            print("You don't have any potions!")
+    elif ans.lower == "":
+        pass
 
 
 def flee():

@@ -3,6 +3,9 @@ from clr_screen import *
 from characters import *
 from enemies import *
 
+item_list = {"potion": 1}
+
+
 
 def level_up():
     player.xp += enemy_1.xp_grant
@@ -55,3 +58,24 @@ def stats_up():
         clear_screen()
     else:
         clear_screen()
+
+
+def potion():
+    if player.hp == player.max_hp:
+        print("Your health is already full!")
+        return
+    elif player.max_hp - player.hp <= 5:
+        print(f"{player.name}'s hp is: {player.hp}.")
+        print("They use a potion!")
+        player.hp = player.max_hp
+        input("")
+        clear_screen()
+        input(f"{player.name}'s hp is now: {player.hp}!")
+    else:
+        print(f"{player.name}'s hp is: {player.hp}.")
+        print("They use a potion!")
+        player.hp = player.max_hp
+        player.hp += 5
+        input("")
+        clear_screen()
+        input(f"{player.name}'s hp is now: {player.hp}!")
