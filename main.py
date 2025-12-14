@@ -5,14 +5,10 @@ from clr_screen import *
 
 def main():
     # check status, battle, use item, talk
-    story()
-    clear_screen()
-    battle()
-    # input("Let's go again to test out your new stats!")
+    # story()
+    # clear_screen()
     # battle()
-    # input("Let's test!")
-    # battle()
-    
+    print("Hello World")
 
 def story():
     nam = input("What's your name? ")
