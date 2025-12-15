@@ -3,7 +3,8 @@ from clr_screen import *
 from characters import *
 from enemies import *
 
-item_list = {"potion": 1}
+
+item_list = {"potion": 1, "molotov": 1}
 
 
 
@@ -21,6 +22,7 @@ def level_up():
         input("")
         clear_screen()
         stats_up()
+        sys.exit(1)
 
 
 def stats_up():
@@ -61,6 +63,7 @@ def stats_up():
 
 
 def potion():
+    item_list["potion"] -= 1
     if player.hp == player.max_hp:
         print("Your health is already full!")
         return
@@ -79,3 +82,37 @@ def potion():
         input("")
         clear_screen()
         input(f"{player.name}'s hp is now: {player.hp}!")
+
+
+def molotov():
+    item_list["molotov"] -= 1
+    print(f"{player.name} used a molotov!")
+    print(f"{enemy.name} took 5 damage!")
+    input("")
+    clear_screen()
+    enemy.hp -= 5
+    if enemy.hp <= 0:
+        clear_screen()
+        print("Victory!")
+        print("Doot doo doo doo, doo doo, doot doo doo!")
+        input("")
+        clear_screen()
+
+        level_up()
+        return 
+    else:
+        input("")
+        clear_screen()
+        print(f"{enemy.name} attacks {player.name} for {enemy.attack} damage.")
+        player.hp -= enemy.attack
+        input("")
+        clear_screen()
+        if player.hp <= 0:
+            print("GAME OVER")
+            sys.exit(1)
+        else:
+            print(f"{player.name}'s hp is: {player.hp}.")
+            print(f"{enemy.name}'s hp is: {enemy.hp}.")
+        
+    
+    

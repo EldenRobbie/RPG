@@ -16,7 +16,12 @@ enemy_3 = Enemy("rat", 8, 2, 1, 1, 10, [])
 
 enemy_4 = Enemy("wolf", 12, 3, 2, 3, 15, [])
 
-
+random_enemy = False
+enemy_list = [enemy_1, enemy_2, enemy_3, enemy_4]
+if random_enemy == False:
+    enemy = enemy_1
+elif random_enemy == True:
+    enemy = random.choice(enemy_list)
 
 
 '''

@@ -14,6 +14,7 @@ def main():
 def story():
     nam = input("What's your name? ")
     player.name = nam
+    
 
 
 main()

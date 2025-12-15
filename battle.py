@@ -5,12 +5,6 @@ from enemies import *
 from clr_screen import *
 from char_func import *
 
-random_enemy = True
-enemy_list = [enemy_1, enemy_2, enemy_3, enemy_4]
-if random_enemy == False:
-    enemy = enemy_1
-elif random_enemy == True:
-    enemy = random.choice(enemy_list)
 
 def battle():
     print(f"A wild {enemy.name} appears!")
@@ -117,8 +111,11 @@ def item():
             potion()
         else:
             print("You don't have any potions!")
-    elif ans.lower == "":
-        pass
+    elif ans.lower() == "molotov":
+        if item_list["molotov"] > 0:
+            molotov()
+        else:
+            print("You don't have any molotovs!")
 
 
 def flee():
@@ -155,3 +152,6 @@ def flee():
             
         else:
             print(f"{player.name}'s hp is: {player.hp}.")
+
+
+
