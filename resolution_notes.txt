@@ -1,0 +1,13 @@
+In order for this project to be considered completed, it must have the following features:
+
+1. A working combat system that can call different monsters (individually) to fight.
+    1. Attack
+    2. Defend
+    3. Item
+    4. Flee
+
+2. At least three NPC's to talk to who offer quests.
+
+3. A working XP/Level system.
+
+4. Two towns to visit with shops to buy items from.
