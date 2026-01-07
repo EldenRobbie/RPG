@@ -19,7 +19,7 @@ health=5,
 attack=2,
 base_defense=0,
 defense=1,
-agility=3,
+agility=1,
 items=[]
 )
 

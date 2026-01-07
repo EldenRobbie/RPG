@@ -1,9 +1,10 @@
+import random
 from enemies import *
 from characters import *
 from extra import clear_screen
 
 def main():
-    battle()
+  battle()
 
 def battle():
     input(f"A {enemy1.name} appeared!")
@@ -23,9 +24,12 @@ def options():
         if option == "1" or option == "attack":
             attack()
             clear_screen()
+            
             if enemy_hp_check() == True:
                 break
+            
             enemy_retaliate()
+            
             if player_hp_check() == True:
                 break
 
@@ -39,7 +43,8 @@ def options():
             item()
 
         elif option == "4" or option == "flee":
-            flee()
+            if flee() == True:
+                break
 
         else:
             print("Well that doesn't work!")
@@ -75,8 +80,15 @@ def item():
 
 
 def flee():
-    print("You fled!")
-
+    num = random.randint(1, 20) + char1.agility
+    if num >= 10:
+        input(f"{char1.name} successfully escaped!")
+        clear_screen()
+        return True
+    
+    else:
+        input(f"{char1.name} was unable to escape...")
+        clear_screen()
 
 def enemy_retaliate():
     damage_done = enemy1.attack - char1.base_defense
