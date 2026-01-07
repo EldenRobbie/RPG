@@ -1,7 +1,9 @@
 import random
 from enemies import *
 from characters import *
-from extra import clear_screen
+from extra import clear_screen, player_hp_check, enemy_hp_check
+from items import *
+
 
 def main():
   battle()
@@ -40,7 +42,8 @@ def options():
                 break
 
         elif option == "3" or option == "item":
-            item()
+            if item() == True:
+                break
 
         elif option == "4" or option == "flee":
             if flee() == True:
@@ -76,7 +79,22 @@ def defend():
 
 
 def item():
-    print("You used an item!")
+    print("What item would you like to use?")
+    print("(1) Potion")
+    print("(2) Escape Powder")
+    print("(3) Molotov")
+    choice = input("").lower()
+    clear_screen()
+    if choice == "1" or choice == "potion":
+        potion()
+
+    elif choice == "2" or choice == "escape powder":
+        if escape_powder() == True:
+            return True
+
+    elif choice == "3" or choice == "molotov":
+        if molotov() == True:
+            return True
 
 
 def flee():
@@ -103,22 +121,7 @@ def enemy_retaliate():
         clear_screen()
 
 
-def player_hp_check():
-    if char1.health <= 0:
-        input(f"Oh no! {char1.name} died!")
-        clear_screen()
-        
-        input("GAME OVER")
-        clear_screen()
-        
-        return True
 
-
-def enemy_hp_check():
-    if enemy1.health <= 0:
-        print(f"The {enemy1.name} died!")
-        
-        return True
 
 
 main()

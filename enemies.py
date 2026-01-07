@@ -6,4 +6,10 @@ class Enemy:
         self. defense = defense
         self.items = []
 
-enemy1 = Enemy("slime", 3, 1, 0, [])
+enemy1 = Enemy(
+    name="slime",
+    health=3, 
+    attack=1, 
+    defense=0, 
+    items=[]
+    )
