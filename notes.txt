@@ -1,0 +1,18 @@
+Battle system
+Prompt for what the user wants to do.
+
+
+Attack
+
+
+
+Defend
+
+
+
+Item
+
+
+
+Flee
+

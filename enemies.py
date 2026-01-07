@@ -7,5 +7,3 @@ class Enemy:
         self.items = []
 
 enemy1 = Enemy("slime", 3, 1, 0, [])
-
-print(enemy1.name)
