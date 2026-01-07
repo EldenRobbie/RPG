@@ -1,0 +1,6 @@
+1/07/2026 0650 EST
+---------------------
+Updated characters.py to have a "base_defense" stat. This will function as natural defense used when being attacked by an enemy.
+The "defense" stat will now be used for using "defend" in battle. 
+# Need to think about armor values and how to implement that in the future.
+---------------------

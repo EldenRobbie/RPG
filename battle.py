@@ -31,6 +31,9 @@ def options():
 
         elif option == "2" or option == "defend":
             defend()
+            clear_screen()
+            if player_hp_check == True:
+                break
 
         elif option == "3" or option == "item":
             item()
@@ -53,7 +56,18 @@ def attack():
    
 
 def defend():
-    print("You defended!")
+    defended_damage = enemy1.attack - char1.defense
+    
+    input(f"{char1.name} defended!")
+    clear_screen()
+
+    input(f"{enemy1.name} attacked {char1.name} for {defended_damage} damage!")
+    clear_screen()
+
+    char1.health -= defended_damage
+
+    if char1.health > 0:
+        input(f"{char1.name} has {char1.health} hp!   ")
 
 
 def item():
@@ -65,7 +79,7 @@ def flee():
 
 
 def enemy_retaliate():
-    damage_done = enemy1.attack - char1.defense
+    damage_done = enemy1.attack - char1.base_defense
     
     input(f"{enemy1.name} attacked {char1.name} for {damage_done} damage!")
     clear_screen()

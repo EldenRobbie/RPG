@@ -3,7 +3,7 @@ Prompt for what the user wants to do.
 
 
 Attack
-
+Need to make it to where even if the enemy dies, show the character's attack before the enemy dies.
 
 
 Defend
